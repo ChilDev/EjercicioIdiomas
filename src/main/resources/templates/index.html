@@ -1,0 +1,31 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Semana 13</title>
+    <style>
+body {background-color: black;}
+h2   {color: white;
+      font-family: Trebuchet MS;
+      text-align: center}
+p   {color: white;
+      font-family: Trebuchet MS;}
+    </style>
+</head>
+<body>
+<h2>
+     <span th:text="${mensaje}"></span>
+</h2>
+<p>
+    <span th:text="${frase}"></span>
+</p>
+    <form action="/idioma_seleccionado" method="post">
+    <br>
+    <select name="idioma">
+        <option value="en_US">English - US</option>
+        <option value="es_MX">Español - MX</option>
+    </select>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
